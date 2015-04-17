@@ -45,7 +45,7 @@
 		
 		<hr width="80%" color="#000">
 		
-		<h2> There are many of my creation in my <label class="lbl_arrowLink">---></label><b><a href="https://github.com/sguha-work">GitHub Profile</a></b></h2>
+		<h2> There are many of my creation in my <label class="lbl_arrowLink">---></label><b>&nbsp;&nbsp;<a href="https://github.com/sguha-work">GitHub Profile</a></b></h2>
 	
 	</div>
 	
@@ -58,6 +58,25 @@
 
 		ga('create', 'UA-58515343-1', 'auto');
 		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var flag = 0;
+		var timer1 = window.setInterval(function(){
+			if(flag==0) {
+				$(".lbl_arrowLink").css({
+					"font-style" : "italic"
+				});
+				flag=1;
+			} else {
+				$(".lbl_arrowLink").css({
+					"font-style" : "normal"
+				});
+				flag=0;
+			}
+		},300);
+	});
 	</script>
 </body>
 </html>
